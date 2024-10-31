@@ -8,16 +8,35 @@
         height: 100%;
         margin: 0;
       }
+
       /* Stel het iframe in op volledige breedte en hoogte */
       iframe {
         width: 100%;
-        height: 100%;
+        height: 90%; /* Verminder hoogte met 10% voor de header */
         border: none;
+      }
+
+      /* Header instellingen */
+      header {
+        height: 10%; /* 10% van de schermhoogte */
+        background-color: #001759;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      /* Afbeelding in de header */
+      header img {
+        width: 5%;
+        height: 5%;
       }
     </style>
   </head>
   <body>
-<iframe
+    <header>
+      <img src="https://github.com/denboschtoenennu/denboschtoenennu.github.io/blob/main/docs/assets/martijnhond.jpg" alt="Header afbeelding">
+    </header>
+    <iframe
       frameborder="0"
       allowfullscreen
       allow="geolocation"
