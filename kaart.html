@@ -23,12 +23,25 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        position: relative;
       }
 
       /* Links en rechts secties voor subpagina's */
       .left-links, .right-links {
         display: flex;
-        gap: 20px;
+        gap: 10%; /* 10% afstand tussen de links */
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+
+      /* Positionering links en rechts van het logo */
+      .left-links {
+        left: 10%; /* 10% van de breedte van het scherm links van het logo */
+      }
+
+      .right-links {
+        right: 10%; /* 10% van de breedte van het scherm rechts van het logo */
       }
 
       /* Link stijl */
