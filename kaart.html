@@ -25,6 +25,19 @@
         align-items: center;
       }
 
+      /* Links en rechts secties voor subpagina's */
+      .left-links, .right-links {
+        display: flex;
+        gap: 20px;
+      }
+
+      /* Link stijl */
+      a {
+        color: white;
+        text-decoration: none;
+        font-size: 1em;
+      }
+
       /* Afbeelding in de header */
       header img {
         height: 90%;
@@ -33,7 +46,15 @@
   </head>
   <body>
     <header>
+      <div class="left-links">
+        <a href="#subpagina1">Subpagina 1</a>
+        <a href="#subpagina2">Subpagina 2</a>
+      </div>
       <img src="/docs/assets/logo.png" alt="Header afbeelding">
+      <div class="right-links">
+        <a href="#subpagina3">Subpagina 3</a>
+        <a href="#subpagina4">Subpagina 4</a>
+      </div>
     </header>
     <iframe
       frameborder="0"
