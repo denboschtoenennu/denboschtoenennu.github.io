@@ -26,6 +26,27 @@
         align-items: center;
       }
 
+      /* Container voor links en logo */
+      .header-container {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        justify-content: space-between;
+      }
+
+      /* Links in de header */
+      .header-links {
+        display: flex;
+        gap: 15px;
+      }
+
+      /* Styling voor de hyperlinks */
+      .header-links a {
+        color: white;
+        text-decoration: none;
+        font-size: 1em;
+      }
+
       /* Afbeelding in de header */
       header img {
         height: 90%;
@@ -34,8 +55,24 @@
   </head>
   <body>
     <header>
-      <img src="/docs/assets/logo.png" alt="Header afbeelding">
+      <div class="header-container">
+        <!-- Links aan de linkerkant -->
+        <div class="header-links">
+          <a href="/subpagina1">Subpagina 1</a>
+          <a href="/subpagina2">Subpagina 2</a>
+        </div>
+
+        <!-- Logo in het midden -->
+        <img src="/docs/assets/logo.png" alt="Header afbeelding">
+
+        <!-- Links aan de rechterkant -->
+        <div class="header-links">
+          <a href="/subpagina3">Subpagina 3</a>
+          <a href="/subpagina4">Subpagina 4</a>
+        </div>
+      </div>
     </header>
+
     <iframe
       frameborder="0"
       allowfullscreen
