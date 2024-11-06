@@ -1,74 +1,86 @@
 <html>
   <head>
-    <title>This is the title of the webpage.</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Header</title>
     <style>
-      /* Zorg dat html en body de volledige hoogte hebben */
-      html,
       body {
-        height: 100%;
         margin: 0;
-        overflow: hidden;
+        font-family: Helvetica, Arial, sans-serif;
       }
 
-      /* Stel het iframe in op volledige breedte en hoogte */
       iframe {
         width: 100%;
-        height: 90%; /* Verminder hoogte met 10% voor de header */
+        height: 90%;
         border: none;
       }
 
-      /* Header instellingen */
-      header {
-        height: 10%; /* 10% van de schermhoogte */
+      .header {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        height: 10vh;
         background-color: #001759;
+      }
+
+      .nav-links {
+        display: flex;
+        justify-content: space-evenly;
+        flex: 1;
+      }
+
+      .nav-item {
+        color: white;
+        text-decoration: none;
+        font-size: 1.5em;
+      }
+
+      .nav-item:hover {
+        background-color: #555;
+      }
+
+      .logo {
         display: flex;
         justify-content: center;
         align-items: center;
       }
 
-      /* Links en rechts secties voor subpagina's */
-      .left-links {
-        display: flex;
-        gap: 10%; /* Afstand tussen de links onderling */
-        margin-right: 10%;
+      .logo img {
+        display: block;
+        width: 50px;
       }
 
-      .right-links {
-        display: flex;
-        gap: 10%; /* Afstand tussen de links onderling */
-        margin-left: 10%;
-      }
-
-      /* Link stijl */
-      a {
-        color: white;
-        text-decoration: none;
-        font-size: 1em;
-      }
-
-      /* Afbeelding in de header */
-      header img {
-        height: 90%;
+      @media (max-width: 768px) {
+        .nav-item {
+          font-size: 1em;
+        }
       }
     </style>
   </head>
   <body>
-    <header>
-      <div class="left-links">
-        <a href="#subpagina1">Subpagina 1</a>
-        <a href="#subpagina2">Subpagina 2</a>
+    <header class="header">
+      <nav class="nav-links">
+        <a href="pagina1.html" class="nav-item">Pagina 1</a>
+        <a href="pagina2.html" class="nav-item">Pagina 2</a>
+      </nav>
+      <div class="logo">
+        <img
+          src="https://www.ikea.com/nl/nl/images/products/bekna-mand-kunststof-rotan__1070869_pe854771_s5.jpg?f=xl"
+          alt="Logo"
+        />
       </div>
-      <img src="/docs/assets/logo.png" alt="Header afbeelding" />
-      <div class="right-links">
-        <a href="#subpagina3">Subpagina 3</a>
-        <a href="#subpagina4">Subpagina 4</a>
-      </div>
+      <nav class="nav-links">
+        <a href="pagina3.html" class="nav-item">Pagina 3</a>
+        <a href="pagina4.html" class="nav-item">Pagina 4</a>
+      </nav>
     </header>
+
     <iframe
       frameborder="0"
       allowfullscreen
       allow="geolocation"
-      src="//umap.openstreetmap.fr/nl/map/historische-locaties-s-hertogenbosch_1133236?scaleControl=false&miniMap=false&scrollWheelZoom=true&zoomControl=true&editMode=disabled&moreControl=true&searchControl=null&tilelayersControl=null&embedControl=null&datalayersControl=true&onLoadPanel=none&captionBar=false&captionMenus=true"
+      src="//umap.openstreetmap.fr/nl/map/historische-locaties-s-hertogenbosch_1133236?scaleControl=false&miniMap=false&scrollWheelZoom=false&zoomControl=true&editMode=disabled&moreControl=true&searchControl=null&tilelayersControl=null&embedControl=null&datalayersControl=true&onLoadPanel=none&captionBar=false&captionMenus=true"
     ></iframe>
+   
   </body>
 </html>
